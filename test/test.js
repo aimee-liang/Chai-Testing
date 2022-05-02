@@ -15,4 +15,18 @@ describe('Coder Languages', function(){
         let language = coder.checkLanguages()
         assert.oneOf(language, coder.languages)
     })
+
+    it ('check that frameworks to be an array', function(){
+        expect([coder.frameworks]).to.be.an('array')
+    })
+
+    it ('check that framework is a valid string', function(){
+        let framework = coder.checkFrameworks()
+        assert.oneOf(framework, coder.frameworks)
+    })
+
+    it ('check coder for level of experience', function(){
+        assert.isAtLeast(coder.yearsOfExperience, 0)
+    })
+
 })
